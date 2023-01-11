@@ -1,48 +1,45 @@
-import React, {useEffect, useState} from 'react';
-import './App.css';
-import {Card} from "./components/Card/Card";
-import {CardLoading} from "./components/Card/CardLoading";
+import styles from './App.module.css';
+import {MouseEventHandler, useState} from "react";
 
-function App() {
+interface SyntheticEvent<T> {
+    e: EventTarget & T
+}
 
-    const [user, setUser] = useState({});
+const App = () => {
 
-    useEffect(() => {
+    const [position, setPosition] = useState({
+        x: 0,
+        y: 0,
+    });
 
-        const username = 'IAmTahazzot';
+    const handleMouseMove = (e: any) => {
+        setPosition(prev => {
+            return {
+                x: e.clientX < 0 ? prev.x: e.clientX,
+                y: e.clientY < 0 ? prev.y: e.clientY
+            }
+        });
+    }
 
-        // sending a req for user profile information
-        fetch('https://api.github.com/users/' + username)
-            .then(response => response.json())
-            .then(data => {
-                const {name, bio, avatar_url: url} = data;
-                // @ts-ignore
-                if (user.name === undefined) {
-                    setTimeout(() => {
-                        setUser((prev) => {
-                            return {
-                                name,
-                                bio,
-                                url
-                            }
-                        });
-                    }, 2000)
-                }
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }, []);
+    const normal = {
+        transform: `translateX(${position.x}px) translateY(${position.y}px)`
+    };
+
+    const zoom = {
+        transform: `translateX(${position.x}px) translateY(${position.y}px) scale(2)`,
+        backgroundColor: '#0077ff',
+
+    };
 
     return (
-        <div className="center">
-            {
-                // @ts-ignore
-                user.name ? <Card name={user.name} url={user.url} bio={user.bio} />
-                    : <CardLoading />
-            }
-        </div>
-    );
+        <>
+            <div className={styles.container}
+                 onMouseMove={handleMouseMove}>
+                <div className={styles.circle}
+                     style={ position.y > 400 ? normal : zoom }></div>
+            </div>
+        </>
+    )
 }
 
 export default App;
