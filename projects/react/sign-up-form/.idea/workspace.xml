@@ -24,6 +24,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-20.04/home/tahazzot/projects/UI247/projects/react/sign-up-form/src&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -34,6 +35,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-20.04\home\tahazzot\projects\UI247\projects\react\sign-up-form\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu-20.04\home\tahazzot\projects\UI247\projects\react\sign-up-form\src\components" />
     </key>
@@ -50,6 +54,8 @@
       <workItem from="1673143302756" duration="7434000" />
       <workItem from="1673157451915" duration="5970000" />
       <workItem from="1673406319430" duration="3868000" />
+      <workItem from="1673423079717" duration="2820000" />
+      <workItem from="1673855323018" duration="595000" />
     </task>
     <servers />
   </component>
