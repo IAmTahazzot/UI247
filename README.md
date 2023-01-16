@@ -1,6 +1,6 @@
 # What is UI247?
 
-A never ending UI/ UX collection for WEB & Mobile.
+A never ending UI/ UX collection for WEB & Mobile. UI247 is where we build the best & modern web/ app components to provide a seamless experience when designing any apps.
 
 ## Projects
 
